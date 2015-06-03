@@ -74,4 +74,25 @@ print( bin(shift_left))
 print("\nbitwise AND...\n")
 print( bin( 0b1110 & 0b101))
 
-       
+# turning it on
+# turn on 3rd bit from right
+
+a = 0b10111011
+mask = 0b0100
+print( bin( a | mask ))
+
+# XOR to bit flip
+
+a = 0b11101110
+mask = 0b11111111
+print( bin( a ^ mask ))
+
+# function to flip n-th bit
+
+def flip_bit( number, n ):
+    mask = 0b1 << (n - 1)
+    result = number ^ mask
+    return bin(result)
+
+print( flip_bit( 0b10111011, 5 ))
+
